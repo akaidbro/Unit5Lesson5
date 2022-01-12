@@ -10,16 +10,20 @@ public class Book
   //Constructor
   public Book(String t, String a, int y, int n, boolean h)
   {
-    title = t;
-    author = a;
-    year = y;
-    numPages = n;
-    hardCover = h;
+    setTitle(t);
+    setAuthor(a);
+    setYear(y);
+    setNumPages(n);
+    setHardCover(h);
   }
 
 //private - cannot access directly from outside the class (Encapsulation)
 //public - can access from outside the class
 //Accessor Methods
+public Book()
+{
+  this("none", "unknown", 1900, 1, false);
+}
 public String getTitle()
 {
   return title;
